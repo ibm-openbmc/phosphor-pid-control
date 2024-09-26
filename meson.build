@@ -163,6 +163,11 @@ executable(
     install_dir: get_option('bindir')
 )
 
+install_data('pidctl',
+    install_mode: 'rwxr-xr-x',
+    install_dir: get_option('bindir')
+)
+
 if not get_option('tests').disabled()
     subdir('test')
 endif
